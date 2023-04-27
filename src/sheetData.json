@@ -1,0 +1,189 @@
+{
+    "sections": [
+        {
+            "rows": [
+                {
+                    "fieldsType": "text",
+                    "fields": [
+                        "Name",
+                        "Player",
+                        "Chronicle"
+                    ]
+                },
+                {
+                    "fieldsType": "text",
+                    "fields": [
+                        "Nature",
+                        "Demeanor",
+                        "Essence"
+                    ]
+                },
+                {
+                    "fieldsType": "text",
+                    "fields": [
+                        "Affiliation",
+                        "Sect",
+                        "Concept"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Attributes",
+            "rows": [
+                {
+                    "title": "Physical",
+                    "fields": [
+                        "Strength",
+                        "Dexterity",
+                        "Stamina"
+                    ]
+                },
+                {
+                    "title": "Social",
+                    "fields": [
+                        "Charisma",
+                        "Manipulation",
+                        "Appearance"
+                    ]
+                },
+                {
+                    "title": "Mental",
+                    "fields": [
+                        "Intelligence",
+                        "Perception",
+                        "Wits"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Abilities",
+            "rows": [
+                {
+                    "title": "Talents",
+                    "fields": [
+                        "Alertness",
+                        "Art",
+                        "Athletics",
+                        "Awareness",
+                        "Brawl",
+                        "Empathy",
+                        "Expression",
+                        "Intimidation",
+                        "Leadership",
+                        "Streetwise",
+                        "Subterfuge"
+                    ]
+                },
+                {
+                    "title": "Skills",
+                    "fields": [
+                        "Crafts",
+                        "Drive",
+                        "Etiquette",
+                        "Firearms",
+                        "Martial Arts",
+                        "Meditation",
+                        "Melee",
+                        "Research",
+                        "Stealth",
+                        "Survival",
+                        "Technology"
+                    ]
+                },
+                {
+                    "title": "Knowledges",
+                    "fields": [
+                        "Academics",
+                        "Computer",
+                        "Cosmology",
+                        "Enigmas",
+                        "Esoterica",
+                        "Investigation",
+                        "Law",
+                        "Medicine",
+                        "Occult",
+                        "Politics",
+                        "Science"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Spheres",
+            "rows": [
+                {
+                    "fields": [
+                        "Correspondence",
+                        "Entropy",
+                        "Foces"
+                    ]
+                },
+                {
+                    "fields": [
+                        "Life",
+                        "Matter",
+                        "Mind"
+                    ]
+                },
+                {
+                    "fields": [
+                        "Prime",
+                        "Spirit",
+                        "Time"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Advantages",
+            "rows": [
+                {
+                    "fieldsType": "addableList",
+                    "fields": [
+                        "Backgrounds",
+                        "Other Traits"
+                    ]
+                },
+                {
+                    "fields": [
+                        {
+                            "type": "ten",
+                            "name": "Arete"
+                        },
+                        {
+                            "type": "doubleTen",
+                            "name": "Willpower"
+                        },
+                        {
+                            "type": "wheel"
+                            
+                        }
+                    ]
+                },
+                {
+                    "fields": [
+                        {
+                            "name": "Health",
+                            "type": "table",
+                            "table": [
+                                ["Bruised","-0","checkbox"],
+                                ["Hurt","-1","checkbox"],
+                                ["Injured","-1","checkbox"],
+                                ["Wounded","-2","checkbox"],
+                                ["Mauled","-2","checkbox"],
+                                ["Crippled","-6","checkbox"],
+                                ["Incapacitated","","checkbox"]
+                            ]
+                        },
+                        {
+                            "type": "number",
+                            "name": "Experience"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
