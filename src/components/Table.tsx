@@ -13,7 +13,7 @@ export const Table = ({data = [[]]}) => {
             {data.map((rowData,i) => rowData.map((cell,j) => {
                 const key = `${i}-${j}`
                 if(cell==='checkbox'){
-                    return <Check key={key}/>
+                    return <Check isSquare key={key}/>
                 }
                 return <div key={key}>{cell}</div>
             } ))}

@@ -1,8 +1,7 @@
 import { useState } from "react"
 import { Check } from "./Check"
-import styled from 'styled-components'
 
-export const NChecks = ({isSquared, length=5}) => {
+export const NChecks = ({isSquare, length=5}) => {
     const [highlit, setHighlit] = useState({})
     const [value, setValue] = useState(0)
 
@@ -23,7 +22,7 @@ export const NChecks = ({isSquared, length=5}) => {
                 onMouseOver={() => handleMouseOver(i)}
                 onMouseOut={() => handleMouseOut(i)}
                 onClick={() => setValue(i+1)}
-                isSquared={isSquared}
+                isSquare={isSquare}
             />)
         })}
         </div>
