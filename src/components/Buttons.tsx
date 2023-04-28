@@ -1,8 +1,9 @@
 import styled from 'styled-components'
-
 //${({aaa})=> aaa ? '' : ''}}
-export const Check = styled.div`
-    display: inline-block;
+export const Button = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     border: 1px solid black;
     ${({isSquare})=> isSquare ? '' : 'border-radius: 1em;'}}
@@ -13,3 +14,5 @@ export const Check = styled.div`
     ${({isChecked})=> isChecked ? 'background: black;' : ''}}
     ${({isHovered})=> isHovered ? 'background: blue;' : ''}}
 `
+
+export const AddButton = ({onClick}) => <Button onClick={onClick}>+</Button>

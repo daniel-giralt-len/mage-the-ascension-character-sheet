@@ -6,28 +6,38 @@ import { Counter } from "./Counter"
 import { TenChecks } from "./TenChecks"
 import { Table } from "./Table"
 import { NChecks } from "./NChecks"
+import { VariableList } from "./VariableList"
+import { DoubleTen } from "./DoubleTen"
 
 const SkillWrapper = styled.div`
     display: flex;
     justify-content: space-between;
 `
 
+const SubSection = ({name, children}) => (<>
+    <SectionRowHeader>{name}</SectionRowHeader>
+    <SkillWrapper>
+        {children}
+    </SkillWrapper>
+</>)
+
 export const Skill = ({name, type, table}) => {
     if(type==='addableList'){
-        return (<>
-            <SectionRowHeader>{name}</SectionRowHeader>
-            <SkillWrapper>
-                <Text/>
-                <FiveChecks/>
-            </SkillWrapper>
-        </>)
+        return (<SubSection name={name}>
+                <VariableList/>
+            </SubSection>)
     }else if(type === 'table'){
-        return (<>
-            <SectionRowHeader>{name}</SectionRowHeader>
-            <SkillWrapper>
+        return (<SubSection name={name}>
                 <Table data={table}/>
-            </SkillWrapper>
-        </>)
+            </SubSection>)
+    }else if(type === 'ten'){
+        return (<SubSection name={name}>
+            <TenChecks />
+        </SubSection>)
+    }else if(type === 'doubleTen'){
+        return (<SubSection name={name}>
+            <DoubleTen />
+        </SubSection>)
     }
 
     let Input = <FiveChecks/>
@@ -35,13 +45,6 @@ export const Skill = ({name, type, table}) => {
         Input = <Text/>
     }else if(type === 'number'){
         Input = <Counter />
-    }else if(type === 'ten'){
-        Input = <TenChecks />
-    }else if(type === 'doubleTen'){
-        Input = (<>
-            <TenChecks />
-            <TenChecks isSquare />
-        </>)
     }else if(type === 'wheel'){
         Input = <NChecks length={20} />
     }

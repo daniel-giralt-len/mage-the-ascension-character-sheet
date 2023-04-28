@@ -1,5 +1,12 @@
 import { useState } from "react"
 import { Check } from "./Check"
+import styled from 'styled-components'
+
+const NChecksWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+`
+
 
 export const NChecks = ({isSquare, length=5}) => {
     const [highlit, setHighlit] = useState({})
@@ -12,7 +19,7 @@ export const NChecks = ({isSquare, length=5}) => {
         setHighlit({[i]: false})
     }
     return (
-        <div>
+        <NChecksWrapper>
         {Array(length).fill().map((_,i)=>{
             const isHovered = highlit[i]
             return (<Check
@@ -25,6 +32,6 @@ export const NChecks = ({isSquare, length=5}) => {
                 isSquare={isSquare}
             />)
         })}
-        </div>
+        </NChecksWrapper>
     )
 }

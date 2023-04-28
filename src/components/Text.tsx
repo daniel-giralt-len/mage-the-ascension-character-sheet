@@ -3,7 +3,7 @@ const TextInput = styled.input `
     height: 1em;
     border: 0;
     border-bottom: 1px solid black;
-    width: 120px;
+    max-width: 120px;
 `
 export const Text = () => (
     <TextInput type='text'/>
