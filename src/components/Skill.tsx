@@ -21,36 +21,38 @@ const SubSection = ({name, children}) => (<>
     </SkillWrapper>
 </>)
 
-export const Skill = ({name, type, table}) => {
-    if(type==='addableList'){
+const getSkillInputComponent = ({type, table}) => {
+    switch(type) {
+        case 'addableList':
+            return (<VariableList/>)
+        case 'table':
+            return (<Table data={table}/>)
+        case 'five':
+            return (<FiveChecks />)
+        case 'ten':
+            return (<TenChecks />)
+        case 'doubleTen':
+            return (<DoubleTen />)
+        case 'text':
+            return (<Text/>)
+        case 'number':
+            return (<Counter />)
+        case 'wheel':
+            return (<NChecks length={20} />)
+    }
+}
+
+export const Skill = ({name, nameStyle, type, table}) => {
+    console.log(name,nameStyle)
+    const SkillInputComponent = getSkillInputComponent({type, table})
+    if(nameStyle === 'header'){
         return (<SubSection name={name}>
-                <VariableList/>
-            </SubSection>)
-    }else if(type === 'table'){
-        return (<SubSection name={name}>
-                <Table data={table}/>
-            </SubSection>)
-    }else if(type === 'ten'){
-        return (<SubSection name={name}>
-            <TenChecks />
-        </SubSection>)
-    }else if(type === 'doubleTen'){
-        return (<SubSection name={name}>
-            <DoubleTen />
+            {SkillInputComponent}
         </SubSection>)
     }
-
-    let Input = <FiveChecks/>
-    if(type === 'text'){
-        Input = <Text/>
-    }else if(type === 'number'){
-        Input = <Counter />
-    }else if(type === 'wheel'){
-        Input = <NChecks length={20} />
-    }
-
+    
     return (<SkillWrapper>
         {name}
-        {Input}
+        {SkillInputComponent}
     </SkillWrapper>)
 }

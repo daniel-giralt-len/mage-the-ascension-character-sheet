@@ -7,8 +7,8 @@ export const SkillRow = ({title, fields}) => {
 
     return (<div>
         <SectionRowHeader>{title}</SectionRowHeader>
-        {sortedFields.map(({name, type, table},i)=>{
-            return (<Skill name={name} type={type} table={table} key={i}/>)
+        {sortedFields.map(({name, nameStyle, type, table},i)=>{
+            return (<Skill name={name} nameStyle={nameStyle} type={type} table={table} key={i}/>)
         })}
     </div>)
 }
