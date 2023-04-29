@@ -1,5 +1,5 @@
 import sheetData from './sheetData.json'
-import { Sheet } from './Sheet'
+import { Sheet } from './components/Sheet/Sheet'
 
 export default ()=>{
   return (<Sheet {...sheetData}/>)
