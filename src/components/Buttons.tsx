@@ -11,8 +11,12 @@ export const Button = styled.div`
     width: 1em;
     height: 1em;
 
-    ${({isChecked})=> isChecked ? 'background: black;' : ''}}
-    ${({isHovered})=> isHovered ? 'background: blue;' : ''}}
+    :hover {
+        background: blue;
+    }
+    :active {
+        background: black;
+    }
 `
 
 export const AddButton = ({onClick}) => <Button onClick={onClick}>+</Button>
