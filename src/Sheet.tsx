@@ -1,4 +1,4 @@
-import { Section } from "./components/Section"
+import { Section } from "./components"
 import styled from 'styled-components'
 
 const SheetCenterer = styled.div`

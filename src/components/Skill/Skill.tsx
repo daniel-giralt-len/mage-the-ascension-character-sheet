@@ -1,13 +1,12 @@
-import { FiveChecks } from "./FiveChecks"
+import { FiveChecks,Text,
+    SectionRowHeader,
+    Counter,
+    TenChecks,
+    Table,
+    NChecks,
+    VariableList,
+    DoubleTen, } from "../index"
 import styled from 'styled-components'
-import { Text } from "./Text"
-import { SectionRowHeader } from "./Headers"
-import { Counter } from "./Counter"
-import { TenChecks } from "./TenChecks"
-import { Table } from "./Table"
-import { NChecks } from "./NChecks"
-import { VariableList } from "./VariableList"
-import { DoubleTen } from "./DoubleTen"
 
 const SkillWrapper = styled.div`
     display: flex;

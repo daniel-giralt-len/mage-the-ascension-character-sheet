@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Check } from "./Check"
+import { Check } from "../index"
 import styled from 'styled-components'
 
 const NChecksWrapper = styled.div`

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Check } from './Check'
+import { Check } from "../index"
 
 const TableWrapper = styled.div`
     display:grid;

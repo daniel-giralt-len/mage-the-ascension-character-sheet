@@ -1,5 +1,4 @@
-import { SectionRowHeader } from "./Headers"
-import { Skill } from "./Skill"
+import { SectionRowHeader, Skill } from "../index"
 
 export const SkillRow = ({title, fields}) => {
     const sortedFields = [...fields]

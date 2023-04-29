@@ -1,7 +1,5 @@
 import { useState } from "react"
-import { AddButton, RemoveButton } from "./Buttons"
-import { FiveChecks } from "./FiveChecks"
-import { Text } from "./Text"
+import { AddButton, FiveChecks, Text } from "../index"
 import styled from 'styled-components'
 
 const ListItem = styled.div`
@@ -13,7 +11,6 @@ export const VariableList = () => {
     const [list, setList] = useState([{name:'',value:0}])
 
     const addNew = () => setList([...list, {name:'',value:0}])
-    const remove = i => setList(list.splice(i))
     return (
         <div>
             {list.map((item,i)=>(

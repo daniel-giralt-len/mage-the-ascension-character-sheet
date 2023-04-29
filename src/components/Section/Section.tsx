@@ -1,5 +1,4 @@
-import { SectionHeader } from "./Headers"
-import { SkillRow } from "./SkillRow"
+import { SectionHeader, SkillRow } from "../index"
 import styled from 'styled-components'
 import { useState } from "react"
 

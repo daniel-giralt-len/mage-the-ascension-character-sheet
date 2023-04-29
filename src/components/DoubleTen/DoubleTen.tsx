@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { TenChecks } from './TenChecks'
+import { TenChecks } from "../index"
 
 const SkillWrapper = styled.div`
     display: flex;
