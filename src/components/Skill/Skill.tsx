@@ -7,6 +7,7 @@ import { FiveChecks,Text,
     VariableList,
     DoubleTen, } from "../index"
 import styled from 'styled-components'
+import { SkillType } from "./types"
 
 const SkillWrapper = styled.div`
     display: flex;
@@ -41,7 +42,7 @@ const getSkillInputComponent = ({type, table}) => {
     }
 }
 
-export const Skill = ({name, nameStyle, type, table}) => {
+export const Skill: React.FC<SkillType> = ({name, nameStyle, type, table}) => {
     console.log(name,nameStyle)
     const SkillInputComponent = getSkillInputComponent({type, table})
     if(nameStyle === 'header'){

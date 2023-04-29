@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-//${({aaa})=> aaa ? '' : ''}}
+import { ButtonProps } from './types'
 export const Button = styled.div`
     display: flex;
     justify-content: center;
@@ -19,4 +19,4 @@ export const Button = styled.div`
     }
 `
 
-export const AddButton = ({onClick}) => <Button onClick={onClick}>+</Button>
+export const AddButton: React.FC<ButtonProps> = ({onClick}) => <Button onClick={onClick}>+</Button>

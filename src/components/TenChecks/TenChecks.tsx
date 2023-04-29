@@ -1,3 +1,4 @@
 import { NChecks } from "../index"
+import { NChecksProps } from "../NChecks/types"
 
-export const TenChecks = ({isSquare}) => (<NChecks isSquare={isSquare} length={10}/>)
+export const TenChecks: React.FC<NChecksProps> = ({isSquare}) => (<NChecks isSquare={isSquare} length={10}/>)

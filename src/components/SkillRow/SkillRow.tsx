@@ -1,6 +1,7 @@
 import { SectionRowHeader, Skill } from "../index"
+import { RowType } from "./types"
 
-export const SkillRow = ({title, fields}) => {
+export const SkillRow: React.FC<RowType> = ({fields, title}) => {
     const sortedFields = [...fields]
     sortedFields.sort()
 

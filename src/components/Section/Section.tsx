@@ -1,6 +1,7 @@
 import { SectionHeader, SkillRow } from "../index"
 import styled from 'styled-components'
 import { useState } from "react"
+import { SectionProps } from "./types"
 
 const SectionGrid = styled.div`
     display: grid;
@@ -12,7 +13,7 @@ const SectionGrid = styled.div`
     column-gap: 50px;
 `
 
-export const Section = ({rows, title}) => {
+export const Section: React.FC<SectionProps> = ({rows, title}) => {
     const [isClosed, setIsClosed] = useState(false)
     const toggleIsClosed = () => setIsClosed(!isClosed)
 
