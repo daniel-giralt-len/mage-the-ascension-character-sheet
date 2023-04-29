@@ -3,27 +3,24 @@
         {
             "rows": [
                 {
-                    "fieldsType": "text",
                     "fields": [
-                        "Name",
-                        "Player",
-                        "Chronicle"
+                        {"type": "text", "name": "Name"},
+                        {"type": "text", "name": "Player"},
+                        {"type": "text", "name": "Chronicle"}
                     ]
                 },
                 {
-                    "fieldsType": "text",
                     "fields": [
-                        "Nature",
-                        "Demeanor",
-                        "Essence"
+                        {"type": "text", "name": "Nature"},
+                        {"type": "text", "name": "Demeanor"},
+                        {"type": "text", "name": "Essence"}
                     ]
                 },
                 {
-                    "fieldsType": "text",
                     "fields": [
-                        "Affiliation",
-                        "Sect",
-                        "Concept"
+                        {"type": "text", "name": "Affiliation"},
+                        {"type": "text", "name": "Sect"},
+                        {"type": "text", "name": "Concept"}
                     ]
                 }
             ]
@@ -34,25 +31,25 @@
                 {
                     "title": "Physical",
                     "fields": [
-                        "Strength",
-                        "Dexterity",
-                        "Stamina"
+                        {"type": "five", "name": "Strength"},
+                        {"type": "five", "name": "Dexterity"},
+                        {"type": "five", "name": "Stamina"}
                     ]
                 },
                 {
                     "title": "Social",
                     "fields": [
-                        "Charisma",
-                        "Manipulation",
-                        "Appearance"
+                        {"type": "five", "name": "Charisma"},
+                        {"type": "five", "name": "Manipulation"},
+                        {"type": "five", "name": "Appearance"}
                     ]
                 },
                 {
                     "title": "Mental",
                     "fields": [
-                        "Intelligence",
-                        "Perception",
-                        "Wits"
+                        {"type": "five", "name": "Intelligence"},
+                        {"type": "five", "name": "Perception"},
+                        {"type": "five", "name": "Wits"}
                     ]
                 }
             ]
@@ -63,49 +60,49 @@
                 {
                     "title": "Talents",
                     "fields": [
-                        "Alertness",
-                        "Art",
-                        "Athletics",
-                        "Awareness",
-                        "Brawl",
-                        "Empathy",
-                        "Expression",
-                        "Intimidation",
-                        "Leadership",
-                        "Streetwise",
-                        "Subterfuge"
+                        {"type": "five", "name": "Alertness"},
+                        {"type": "five", "name": "Art"},
+                        {"type": "five", "name": "Athletics"},
+                        {"type": "five", "name": "Awareness"},
+                        {"type": "five", "name": "Brawl"},
+                        {"type": "five", "name": "Empathy"},
+                        {"type": "five", "name": "Expression"},
+                        {"type": "five", "name": "Intimidation"},
+                        {"type": "five", "name": "Leadership"},
+                        {"type": "five", "name": "Streetwise"},
+                        {"type": "five", "name": "Subterfuge"}
                     ]
                 },
                 {
                     "title": "Skills",
                     "fields": [
-                        "Crafts",
-                        "Drive",
-                        "Etiquette",
-                        "Firearms",
-                        "Martial Arts",
-                        "Meditation",
-                        "Melee",
-                        "Research",
-                        "Stealth",
-                        "Survival",
-                        "Technology"
+                        {"type": "five", "name": "Crafts"},
+                        {"type": "five", "name": "Drive"},
+                        {"type": "five", "name": "Etiquette"},
+                        {"type": "five", "name": "Firearms"},
+                        {"type": "five", "name": "Martial Arts"},
+                        {"type": "five", "name": "Meditation"},
+                        {"type": "five", "name": "Melee"},
+                        {"type": "five", "name": "Research"},
+                        {"type": "five", "name": "Stealth"},
+                        {"type": "five", "name": "Survival"},
+                        {"type": "five", "name": "Technology"}
                     ]
                 },
                 {
                     "title": "Knowledges",
                     "fields": [
-                        "Academics",
-                        "Computer",
-                        "Cosmology",
-                        "Enigmas",
-                        "Esoterica",
-                        "Investigation",
-                        "Law",
-                        "Medicine",
-                        "Occult",
-                        "Politics",
-                        "Science"
+                        {"type": "five", "name": "Academics"},
+                        {"type": "five", "name": "Computer"},
+                        {"type": "five", "name": "Cosmology"},
+                        {"type": "five", "name": "Enigmas"},
+                        {"type": "five", "name": "Esoterica"},
+                        {"type": "five", "name": "Investigation"},
+                        {"type": "five", "name": "Law"},
+                        {"type": "five", "name": "Medicine"},
+                        {"type": "five", "name": "Occult"},
+                        {"type": "five", "name": "Politics"},
+                        {"type": "five", "name": "Science"}
                     ]
                 }
             ]
@@ -115,23 +112,23 @@
             "rows": [
                 {
                     "fields": [
-                        "Correspondence",
-                        "Entropy",
-                        "Foces"
+                        {"type": "five", "name": "Correspondence"},
+                        {"type": "five", "name": "Entropy"},
+                        {"type": "five", "name": "Foces"}
                     ]
                 },
                 {
                     "fields": [
-                        "Life",
-                        "Matter",
-                        "Mind"
+                        {"type": "five", "name": "Life"},
+                        {"type": "five", "name": "Matter"},
+                        {"type": "five", "name": "Mind"}
                     ]
                 },
                 {
                     "fields": [
-                        "Prime",
-                        "Spirit",
-                        "Time"
+                        {"type": "five", "name": "Prime"},
+                        {"type": "five", "name": "Spirit"},
+                        {"type": "five", "name": "Time"}
                     ]
                 }
             ]
@@ -140,10 +137,9 @@
             "title": "Advantages",
             "rows": [
                 {
-                    "fieldsType": "addableList",
                     "fields": [
-                        "Backgrounds",
-                        "Other Traits"
+                        {"type": "addableList", "name": "Backgrounds"},
+                        {"type": "addableList", "name": "Other Traits"}
                     ]
                 },
                 {
