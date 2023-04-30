@@ -8,37 +8,38 @@ import { FiveChecks,Text,
     DoubleTen, } from "../index"
 import styled from 'styled-components'
 import { getSkillInputComponentType, SkillType } from "./types"
-import { useFormContext } from "react-hook-form"
+
 
 const SkillWrapper = styled.div`
     display: flex;
     justify-content: space-between;
 `
 
-const getSkillInputComponent: getSkillInputComponentType = ({name, register, type, table}) => {
+const getSkillInputComponent: getSkillInputComponentType = ({name, type, table}) => {
     switch(type) {
         case 'addableList':
-            return (<VariableList{...register(name)} />)
+            return (<VariableList name={name} />)
         case 'table':
-            return (<Table data={table}{...register(name)} />)
+            return (<Table data={table} name={name} />)
         case 'five':
-            return (<FiveChecks {...register(name)} />)
+            return (<FiveChecks name={name} />)
         case 'ten':
-            return (<TenChecks {...register(name)} />)
+            return (<TenChecks name={name} />)
         case 'doubleTen':
-            return (<DoubleTen {...register(name)} />)
+            return (<DoubleTen name={name} />)
         case 'text':
-            return (<Text{...register(name)} />)
+            return (<Text name={name} />)
         case 'number':
-            return (<Counter {...register(name)} />)
+            return (<Counter name={name} />)
         case 'wheel':
-            return (<NChecks length={20} {...register(name)} />)
+            return (<NChecks length={20} name={name} />)
+        default:
+            return (<div>FIELD NOT IMPLEMENTED {name}, {type}</div>)
     }
 }
 
 export const Skill: React.FC<SkillType> = ({name, nameStyle, type, table}) => {
-    const { register } = useFormContext()
-    const SkillInputComponent = getSkillInputComponent({name, register, type, table})
+    const SkillInputComponent = getSkillInputComponent({name, type, table})
     if(nameStyle === 'header'){
         return (<>
             <SectionRowHeader>{name}</SectionRowHeader>

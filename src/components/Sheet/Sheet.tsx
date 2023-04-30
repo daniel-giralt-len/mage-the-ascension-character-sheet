@@ -19,7 +19,7 @@ export const Sheet: React.FC<SheetProps> = ({sections}) => {
     const handleSubmit = () => {
         console.log(getValues())
     }
-    useEffect(handleSubmit,[watch])
+    useEffect(handleSubmit, [watch, getValues()])
     return (
     <FormProvider {...methods} >
         <SheetCenterer>
