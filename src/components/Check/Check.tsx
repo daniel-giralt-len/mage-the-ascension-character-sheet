@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { CheckProps } from './types'
 
-//${({aaa})=> aaa ? '' : ''}}
 export const Check = styled.div<CheckProps>`
     display: inline-block;
 
@@ -12,5 +11,7 @@ export const Check = styled.div<CheckProps>`
     height: 1em;
 
     ${({isChecked})=> isChecked ? 'background: black;' : ''}}
-    ${({isHovered})=> isHovered ? 'background: blue;' : ''}}
+    :hover {
+        background: blue;
+    }
 `

@@ -3,7 +3,3 @@ export type NChecksProps = {
     length?: number
     name?: string
 }
-
-export type HighlightType = {
-    [key: string]: boolean
-}
