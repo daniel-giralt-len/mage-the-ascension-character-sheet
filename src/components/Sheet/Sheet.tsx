@@ -1,8 +1,9 @@
-import { Button, Section } from "../index"
+import { Section } from "../index"
 import styled from 'styled-components'
 import { useForm, FormProvider } from "react-hook-form"
 import { SheetProps } from "./types"
 import { useEffect } from "react"
+import { getDefaultFormValues } from "./helpers"
 
 const SheetCenterer = styled.div`
     display:flex;
@@ -14,7 +15,7 @@ const SheetWrapper = styled.div`
 `
 
 export const Sheet: React.FC<SheetProps> = ({sections}) => {
-    const methods = useForm()
+    const methods = useForm({defaultValues: getDefaultFormValues(sections)})
     const {watch, getValues} = methods
     const handleSubmit = () => {
         console.log(getValues())

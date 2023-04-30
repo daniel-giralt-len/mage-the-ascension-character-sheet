@@ -344,7 +344,8 @@
                         },
                         {
                             "nameStyle": "header",
-                            "type": "wheel"
+                            "type": "wheel",
+                            "name": "Quintessence"
                         }
                     ]
                 },
