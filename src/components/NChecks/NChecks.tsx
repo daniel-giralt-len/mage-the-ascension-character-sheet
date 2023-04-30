@@ -23,7 +23,7 @@ export const NChecks: React.FC<NChecksProps> = ({isSquare, length=5, name}) => {
             return (<Check
                 key={i}
                 isChecked={value >= i+1}
-                onClick={() => name && handleValueChange(i+1)}
+                onClick={() => handleValueChange(i+1)}
                 isSquare={isSquare}
             />)
         })}
