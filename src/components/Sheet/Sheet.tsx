@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { useForm, FormProvider } from "react-hook-form"
 import { SheetProps } from "./types"
 import { useEffect } from "react"
-import { getDefaultFormValues } from "./helpers"
 
 const SheetCenterer = styled.div`
     display:flex;
@@ -14,11 +13,10 @@ const SheetWrapper = styled.div`
     max-width: 800px;
 `
 
-export const Sheet: React.FC<SheetProps> = ({sections}) => {
-    const methods = useForm({defaultValues: getDefaultFormValues(sections)})
+export const Sheet: React.FC<SheetProps> = ({sections, defaultValues}) => {
+    const methods = useForm({defaultValues})
     const {watch, getValues} = methods
     const handleSubmit = () => {
-        console.log(getValues())
     }
     useEffect(handleSubmit, [watch, getValues()])
     return (
