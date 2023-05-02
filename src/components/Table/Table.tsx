@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { useFormContext } from "react-hook-form"
 import { Check } from "../index"
 import { TableType, TableWrapperType } from './types'
+import { t } from '../../translations'
 
 const TableWrapper = styled.div<TableWrapperType>`
     display:grid;
@@ -29,7 +30,7 @@ export const Table: React.FC<TableType> = ({data = [[]], name}) => {
                         isSquare
                     />
                 }
-                return <div key={key}>{cell}</div>
+                return <div key={key}>{j === 0 ? t(cell) : cell}</div>
             } ))}
         </TableWrapper>
     )

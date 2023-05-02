@@ -6,15 +6,15 @@
                     "fields": [
                         {
                             "type": "text",
-                            "name": "Name"
+                            "name": "0"
                         },
                         {
                             "type": "text",
-                            "name": "Player"
+                            "name": "1"
                         },
                         {
                             "type": "text",
-                            "name": "Chronicle"
+                            "name": "2"
                         }
                     ]
                 },
@@ -22,15 +22,15 @@
                     "fields": [
                         {
                             "type": "text",
-                            "name": "Nature"
+                            "name": "3"
                         },
                         {
                             "type": "text",
-                            "name": "Demeanor"
+                            "name": "4"
                         },
                         {
                             "type": "text",
-                            "name": "Essence"
+                            "name": "5"
                         }
                     ]
                 },
@@ -38,244 +38,244 @@
                     "fields": [
                         {
                             "type": "text",
-                            "name": "Affiliation"
+                            "name": "6"
                         },
                         {
                             "type": "text",
-                            "name": "Sect"
+                            "name": "7"
                         },
                         {
                             "type": "text",
-                            "name": "Concept"
+                            "name": "8"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Attributes",
+            "title": "67",
             "rows": [
                 {
-                    "title": "Physical",
+                    "title": "68",
                     "fields": [
                         {
                             "type": "five",
-                            "name": "Strength"
+                            "name": "9"
                         },
                         {
                             "type": "five",
-                            "name": "Dexterity"
+                            "name": "10"
                         },
                         {
                             "type": "five",
-                            "name": "Stamina"
+                            "name": "11"
                         }
                     ]
                 },
                 {
-                    "title": "Social",
+                    "title": "69",
                     "fields": [
                         {
                             "type": "five",
-                            "name": "Charisma"
+                            "name": "12"
                         },
                         {
                             "type": "five",
-                            "name": "Manipulation"
+                            "name": "13"
                         },
                         {
                             "type": "five",
-                            "name": "Appearance"
+                            "name": "14"
                         }
                     ]
                 },
                 {
-                    "title": "Mental",
+                    "title": "70",
                     "fields": [
                         {
                             "type": "five",
-                            "name": "Intelligence"
+                            "name": "15"
                         },
                         {
                             "type": "five",
-                            "name": "Perception"
+                            "name": "16"
                         },
                         {
                             "type": "five",
-                            "name": "Wits"
+                            "name": "17"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Abilities",
+            "title": "71",
             "rows": [
                 {
-                    "title": "Talents",
+                    "title": "72",
                     "fields": [
                         {
                             "type": "five",
-                            "name": "Alertness"
+                            "name": "18"
                         },
                         {
                             "type": "five",
-                            "name": "Art"
+                            "name": "19"
                         },
                         {
                             "type": "five",
-                            "name": "Athletics"
+                            "name": "20"
                         },
                         {
                             "type": "five",
-                            "name": "Awareness"
+                            "name": "21"
                         },
                         {
                             "type": "five",
-                            "name": "Brawl"
+                            "name": "22"
                         },
                         {
                             "type": "five",
-                            "name": "Empathy"
+                            "name": "23"
                         },
                         {
                             "type": "five",
-                            "name": "Expression"
+                            "name": "24"
                         },
                         {
                             "type": "five",
-                            "name": "Intimidation"
+                            "name": "25"
                         },
                         {
                             "type": "five",
-                            "name": "Leadership"
+                            "name": "26"
                         },
                         {
                             "type": "five",
-                            "name": "Streetwise"
+                            "name": "27"
                         },
                         {
                             "type": "five",
-                            "name": "Subterfuge"
+                            "name": "28"
                         }
                     ]
                 },
                 {
-                    "title": "Skills",
+                    "title": "73",
                     "fields": [
                         {
                             "type": "five",
-                            "name": "Crafts"
+                            "name": "29"
                         },
                         {
                             "type": "five",
-                            "name": "Drive"
+                            "name": "30"
                         },
                         {
                             "type": "five",
-                            "name": "Etiquette"
+                            "name": "31"
                         },
                         {
                             "type": "five",
-                            "name": "Firearms"
+                            "name": "32"
                         },
                         {
                             "type": "five",
-                            "name": "Martial Arts"
+                            "name": "33"
                         },
                         {
                             "type": "five",
-                            "name": "Meditation"
+                            "name": "34"
                         },
                         {
                             "type": "five",
-                            "name": "Melee"
+                            "name": "35"
                         },
                         {
                             "type": "five",
-                            "name": "Research"
+                            "name": "36"
                         },
                         {
                             "type": "five",
-                            "name": "Stealth"
+                            "name": "37"
                         },
                         {
                             "type": "five",
-                            "name": "Survival"
+                            "name": "38"
                         },
                         {
                             "type": "five",
-                            "name": "Technology"
+                            "name": "39"
                         }
                     ]
                 },
                 {
-                    "title": "Knowledges",
+                    "title": "74",
                     "fields": [
                         {
                             "type": "five",
-                            "name": "Academics"
+                            "name": "40"
                         },
                         {
                             "type": "five",
-                            "name": "Computer"
+                            "name": "41"
                         },
                         {
                             "type": "five",
-                            "name": "Cosmology"
+                            "name": "42"
                         },
                         {
                             "type": "five",
-                            "name": "Enigmas"
+                            "name": "43"
                         },
                         {
                             "type": "five",
-                            "name": "Esoterica"
+                            "name": "44"
                         },
                         {
                             "type": "five",
-                            "name": "Investigation"
+                            "name": "45"
                         },
                         {
                             "type": "five",
-                            "name": "Law"
+                            "name": "46"
                         },
                         {
                             "type": "five",
-                            "name": "Medicine"
+                            "name": "47"
                         },
                         {
                             "type": "five",
-                            "name": "Occult"
+                            "name": "48"
                         },
                         {
                             "type": "five",
-                            "name": "Politics"
+                            "name": "49"
                         },
                         {
                             "type": "five",
-                            "name": "Science"
+                            "name": "50"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Spheres",
+            "title": "75",
             "rows": [
                 {
                     "fields": [
                         {
                             "type": "five",
-                            "name": "Correspondence"
+                            "name": "51"
                         },
                         {
                             "type": "five",
-                            "name": "Entropy"
+                            "name": "52"
                         },
                         {
                             "type": "five",
-                            "name": "Foces"
+                            "name": "53"
                         }
                     ]
                 },
@@ -283,15 +283,15 @@
                     "fields": [
                         {
                             "type": "five",
-                            "name": "Life"
+                            "name": "54"
                         },
                         {
                             "type": "five",
-                            "name": "Matter"
+                            "name": "55"
                         },
                         {
                             "type": "five",
-                            "name": "Mind"
+                            "name": "56"
                         }
                     ]
                 },
@@ -299,34 +299,34 @@
                     "fields": [
                         {
                             "type": "five",
-                            "name": "Prime"
+                            "name": "57"
                         },
                         {
                             "type": "five",
-                            "name": "Spirit"
+                            "name": "58"
                         },
                         {
                             "type": "five",
-                            "name": "Time"
+                            "name": "59"
                         }
                     ]
                 }
             ]
         },
         {
-            "title": "Advantages",
+            "title": "76",
             "rows": [
                 {
                     "fields": [
                         {
                             "type": "addableList",
                             "nameStyle": "header",
-                            "name": "Backgrounds"
+                            "name": "60"
                         },
                         {
                             "type": "addableList",
                             "nameStyle": "header",
-                            "name": "Other Traits"
+                            "name": "61"
                         }
                     ]
                 },
@@ -335,59 +335,59 @@
                         {
                             "nameStyle": "header",
                             "type": "ten",
-                            "name": "Arete"
+                            "name": "62"
                         },
                         {
                             "nameStyle": "header",
                             "type": "doubleTen",
-                            "name": "Willpower"
+                            "name": "63"
                         },
                         {
                             "nameStyle": "header",
                             "type": "wheel",
-                            "name": "Quintessence"
+                            "name": "64"
                         }
                     ]
                 },
                 {
                     "fields": [
                         {
-                            "name": "Health",
+                            "name": "65",
                             "type": "table",
                             "nameStyle": "header",
                             "table": [
                                 [
-                                    "Bruised",
+                                    "77",
                                     "-0",
                                     "checkbox"
                                 ],
                                 [
-                                    "Hurt",
+                                    "78",
                                     "-1",
                                     "checkbox"
                                 ],
                                 [
-                                    "Injured",
+                                    "79",
                                     "-1",
                                     "checkbox"
                                 ],
                                 [
-                                    "Wounded",
+                                    "80",
                                     "-2",
                                     "checkbox"
                                 ],
                                 [
-                                    "Mauled",
+                                    "81",
                                     "-2",
                                     "checkbox"
                                 ],
                                 [
-                                    "Crippled",
+                                    "82",
                                     "-6",
                                     "checkbox"
                                 ],
                                 [
-                                    "Incapacitated",
+                                    "83",
                                     "",
                                     "checkbox"
                                 ]
@@ -396,7 +396,7 @@
                         {
                             "nameStyle": "header",
                             "type": "number",
-                            "name": "Experience"
+                            "name": "66"
                         }
                     ]
                 }

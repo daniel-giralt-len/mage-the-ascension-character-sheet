@@ -43,7 +43,7 @@ export const Skill: React.FC<SkillType> = ({name, nameStyle, type, table}) => {
     const SkillInputComponent = getSkillInputComponent({name, type, table})
     if(nameStyle === 'header'){
         return (<>
-            <SectionRowHeader>{name}</SectionRowHeader>
+            <SectionRowHeader>{t(name)}</SectionRowHeader>
             <SkillWrapper>
                 {SkillInputComponent}
             </SkillWrapper>
