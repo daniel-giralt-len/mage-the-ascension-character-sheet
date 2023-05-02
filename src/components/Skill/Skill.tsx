@@ -8,6 +8,7 @@ import { FiveChecks,Text,
     DoubleTen, } from "../index"
 import styled from 'styled-components'
 import { getSkillInputComponentType, SkillType } from "./types"
+import { t } from "../../translations"
 
 
 const SkillWrapper = styled.div`
@@ -34,7 +35,7 @@ const getSkillInputComponent: getSkillInputComponentType = ({name, type, table})
         case 'wheel':
             return (<NChecks length={20} name={name} />)
         default:
-            return (<div>FIELD NOT IMPLEMENTED {name}, {type}</div>)
+            return (<div>FIELD NOT IMPLEMENTED {t(name)}, {type}</div>)
     }
 }
 
@@ -50,7 +51,7 @@ export const Skill: React.FC<SkillType> = ({name, nameStyle, type, table}) => {
     }
     
     return (<SkillWrapper>
-        {name}
+        {t(name)}
         {SkillInputComponent}
     </SkillWrapper>)
 }
