@@ -15,3 +15,13 @@ export const Check = styled.div<CheckProps>`
         background: blue;
     }
 `
+
+export const UnCheck = styled(Check)`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    :hover {
+        background: red;
+    }
+`

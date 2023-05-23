@@ -1,6 +1,6 @@
 import { useFormContext } from "react-hook-form"
 import styled from 'styled-components'
-import { Check } from "../index"
+import { Check, UnCheck } from "../index"
 import { NChecksProps } from "./types"
 
 const NChecksWrapper = styled.div`
@@ -19,9 +19,14 @@ export const NChecks: React.FC<NChecksProps> = ({isSquare, length=5, name}) => {
     }
     return (
         <NChecksWrapper>
+            <UnCheck
+                key={0}
+                onClick={() => handleValueChange(0)}
+                isSquare={isSquare}
+            >x</UnCheck>
         {Array(length).fill(0).map((_,i)=>{
             return (<Check
-                key={i}
+                key={i+1}
                 isChecked={value >= i+1}
                 onClick={() => handleValueChange(i+1)}
                 isSquare={isSquare}
