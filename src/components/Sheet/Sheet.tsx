@@ -26,7 +26,6 @@ export const Sheet: React.FC<SheetProps> = ({sections, defaultValues}) => {
 
     useEffect(() => {
         const formValues = decodeForm(window.location.search)
-        console.log(formValues)
         reset({
             ...defaultValues,
             ...formValues

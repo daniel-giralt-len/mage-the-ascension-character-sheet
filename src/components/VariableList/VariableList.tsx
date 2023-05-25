@@ -2,6 +2,7 @@ import { useState } from "react"
 import { AddButton, FiveChecks, Text } from "../index"
 import styled from 'styled-components'
 import { VariableListProps } from "./types"
+import { useFormContext } from "react-hook-form"
 
 const ListItem = styled.div`
     display: flex;
@@ -10,9 +11,9 @@ const ListItem = styled.div`
 
 export const VariableList: React.FC<VariableListProps
 > = ({name}) => {
-    const [list, setList] = useState([{name:'',value:0}])
-
-    const addNew = () => setList([...list, {name:'',value:0}])
+    const {watch, setValue} = useFormContext()
+    const list = watch(name)
+    const addNew = () => setValue(`${name}.${list.length}`, ['',0])
     return (
         <div>
             {list.map((_,i)=>(

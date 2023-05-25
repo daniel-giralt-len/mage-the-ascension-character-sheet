@@ -1,6 +1,5 @@
 
 export const getMinForm = (form, defaultValues) => {
-    console.log(form)
     return Object
         .entries(form)
         .reduce((acc, [k,v]) => {
@@ -20,8 +19,8 @@ export const encodeForm = (form, defaultValues) => {
 
 function paramsToObject(entries) {
     const result = {}
-    for(const [key, value] of entries) { // each 'entry' is a [key, value] tupple
-      result[key] = JSON.parse(value);
+    for(const [key, value] of entries) {
+      result[key] = JSON.parse(value)
     }
     return result;
   }
@@ -29,6 +28,6 @@ function paramsToObject(entries) {
 
 export const decodeForm = (queryString) => {
     const params = new URLSearchParams(queryString)
-    const form = paramsToObject(params.entries());
+    const form = paramsToObject(params.entries())
     return form
 }
