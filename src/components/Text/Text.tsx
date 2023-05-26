@@ -8,6 +8,11 @@ const TextInput = styled.input `
     border-bottom: 1px solid black;
     max-width: 120px;
 `
-export const Text: React.FC<TextProps> = ({name}) => (
-    <TextInput type='text' {...useFormContext().register(name)} />
+export const Text: React.FC<TextProps> = ({name}) => {
+    const { watch } = useFormContext()
+    const readOnly = watch('readOnly')
+
+    return (
+    <TextInput disabled={readOnly} type='text' {...useFormContext().register(name)} />
 )
+}

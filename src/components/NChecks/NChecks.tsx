@@ -12,7 +12,7 @@ const NChecksWrapper = styled.div`
 export const NChecks: React.FC<NChecksProps> = ({isSquare, length=5, name}) => {
     const { watch, setValue } = useFormContext()
     const value = watch(name)
-    const readOnly = watch(name)
+    const readOnly = watch('readOnly')
 
 
     const handleValueChange = (v: number) => {

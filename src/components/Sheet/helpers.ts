@@ -12,7 +12,7 @@ export const getMinForm = (form, defaultValues) => {
 }
 
 export const encodeForm = (form, defaultValues) => {
-    const minForm = getMinForm(form,defaultValues)
+    const minForm = getMinForm({...form, readOnly: true},defaultValues)
     const queryString = new URLSearchParams(minForm).toString()
     return queryString
 }

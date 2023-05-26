@@ -18,12 +18,14 @@ export const Table: React.FC<TableType> = ({data = [[]], name}) => {
         previousState[i] = !previousState[i]
         setValue(name, previousState)
     }
+    const readOnly = watch('readOnly')
     return (
         <TableWrapper nCols={data[0].length} nRows={data.length}>
             {data.map((rowData,i) => rowData.map((cell,j) => {
                 const key = `${i}-${j}`
                 if(cell==='checkbox'){
                     return <Check
+                        disabled={readOnly}
                         key={key}
                         isChecked={checks[i]}
                         onClick={() => toggleTableRow(i)}
