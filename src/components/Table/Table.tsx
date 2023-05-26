@@ -25,10 +25,11 @@ export const Table: React.FC<TableType> = ({data = [[]], name}) => {
                 const key = `${i}-${j}`
                 if(cell==='checkbox'){
                     return <Check
+                        readOnly={readOnly}
                         disabled={readOnly}
                         key={key}
                         isChecked={checks[i]}
-                        onClick={() => toggleTableRow(i)}
+                        onClick={() => !readOnly &&toggleTableRow(i)}
                         isSquare
                     />
                 }

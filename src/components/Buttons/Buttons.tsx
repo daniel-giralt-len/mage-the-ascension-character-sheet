@@ -1,5 +1,7 @@
-import styled from 'styled-components'
+import styled from 'styled-components' 
+import { formInteractionStyling } from '../styles'
 import { AddButtonProps } from './types'
+
 export const Button = styled.div`
     display: flex;
     justify-content: center;
@@ -11,12 +13,7 @@ export const Button = styled.div`
     width: 1em;
     height: 1em;
 
-    :hover {
-        background: blue;
-    }
-    :active {
-        background: black;
-    }
+    ${formInteractionStyling({})}
 `
 
 export const AddButton: React.FC<AddButtonProps> = ({onClick}) => <Button onClick={onClick}>+</Button>

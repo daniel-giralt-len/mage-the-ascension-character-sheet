@@ -12,6 +12,7 @@ const ListItem = styled.div`
 export const VariableList: React.FC<VariableListProps
 > = ({name}) => {
     const {watch, setValue} = useFormContext()
+    const readOnly = watch('readOnly')
     const list = watch(name)
     const addNew = () => setValue(`${name}.${list.length}`, ['',0])
     return (
@@ -22,7 +23,7 @@ export const VariableList: React.FC<VariableListProps
                     <FiveChecks name={`${name}.${i}.1`} />
                 </ListItem>
             ))}
-            <AddButton onClick={addNew} />
+            {!readOnly && <AddButton onClick={addNew} />}
         </div>
     )
 }

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { formInteractionStyling } from '../styles'
 import { CheckProps } from './types'
 
 export const Check = styled.div<CheckProps>`
@@ -13,14 +14,11 @@ export const Check = styled.div<CheckProps>`
     height: 1em;
 
     ${({isChecked})=> isChecked ? 'background: black;' : ''}}
-    ${({readOnly})=> readOnly ? `:hover {
-        background: blue;
-    }`: ''}
+    ${({readOnly})=> formInteractionStyling({readOnly})}
+}
 `
 
 export const UnCheck = styled(Check)`
     border: 0;
-    ${({readOnly})=> readOnly ? `:hover {
-        background: red;
-    }`: ''}
+    ${({readOnly})=> formInteractionStyling({isDelete: true, readOnly})}
 `
