@@ -1,5 +1,5 @@
 import { useFormContext } from "react-hook-form";
-import { HeaderWrapper, LanguageWrapper } from "./styles";
+import { HeaderWrapper, LanguageWrapper, SaveInstructionsWrapper } from "./styles";
 import { ConfigurationHeaderProps } from "./types";
 import translations from '../../translations.json'
 import { t } from '../../translations'
@@ -18,7 +18,11 @@ export const ConfigurationHeader: React.FC<ConfigurationHeaderProps> = ({
                 ? (<button type='button' onClick={onEdit}>{t('Edit')}</button>)
                 : (<button type='button' onClick={onSubmit}>{t('Save')}</button>)
             }
-            {readOnly && <div>{t('SaveInstructions')}</div>}
+            {readOnly && 
+                (<SaveInstructionsWrapper>
+                    {t('SaveInstructions')}
+                </SaveInstructionsWrapper>)
+            }
             <LanguageWrapper>
                 {Object.keys(translations).map(langId => (
                     <button type='button' key={langId} onClick={()=> onChangeLanguage(langId)}>{selectedLanguage === langId ? '>':''}{t(langId)}</button>
