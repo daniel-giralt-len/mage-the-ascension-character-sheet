@@ -5,3 +5,8 @@ export type ButtonProps = {
 export type AddButtonProps = {
     onClick?: (event: any) => void
 } & ButtonProps
+
+
+export type ConfigButtonProps = {
+    isSelected?: boolean
+} & ButtonProps

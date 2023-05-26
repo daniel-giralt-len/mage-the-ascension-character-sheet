@@ -5,9 +5,9 @@ export const formInteractionStyling = ({isDelete = false, readOnly = false}) =>{
     }
     return `
     :hover {
-        background: ${isDelete ? 'red' : 'blue'};
+        background: ${isDelete ? '#9a1818' : '#27189a'};
     }
     :active {
-        background: yellow;
+        background: #719a18;
     }
 `}

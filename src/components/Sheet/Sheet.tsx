@@ -4,6 +4,7 @@ import { useForm, FormProvider } from "react-hook-form"
 import { SheetProps } from "./types"
 import { encodeForm, decodeForm } from "./helpers"
 import { useEffect } from "react"
+import { GlobalStyle } from "./styles"
 
 const SheetCenterer = styled.div`
     display:flex;
@@ -38,6 +39,7 @@ export const Sheet: React.FC<SheetProps> = ({sections, defaultValues}) => {
 
     return (
     <FormProvider {...methods} >
+        <GlobalStyle/>
         <SheetCenterer>
             <SheetWrapper>
                 <form>

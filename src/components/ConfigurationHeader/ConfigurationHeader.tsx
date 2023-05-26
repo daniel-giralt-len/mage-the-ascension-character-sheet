@@ -3,6 +3,7 @@ import { HeaderWrapper, LanguageWrapper, SaveInstructionsWrapper } from "./style
 import { ConfigurationHeaderProps } from "./types";
 import translations from '../../translations.json'
 import { t } from '../../translations'
+import { ConfigButton } from "../index";
 
 export const ConfigurationHeader: React.FC<ConfigurationHeaderProps> = ({
     onSubmit,
@@ -15,8 +16,8 @@ export const ConfigurationHeader: React.FC<ConfigurationHeaderProps> = ({
     return (
         <HeaderWrapper>
             {readOnly
-                ? (<button type='button' onClick={onEdit}>{t('Edit')}</button>)
-                : (<button type='button' onClick={onSubmit}>{t('Save')}</button>)
+                ? (<ConfigButton type='button' onClick={onEdit}>{t('Edit')}</ConfigButton>)
+                : (<ConfigButton type='button' onClick={onSubmit}>{t('Save')}</ConfigButton>)
             }
             {readOnly && 
                 (<SaveInstructionsWrapper>
@@ -24,9 +25,12 @@ export const ConfigurationHeader: React.FC<ConfigurationHeaderProps> = ({
                 </SaveInstructionsWrapper>)
             }
             <LanguageWrapper>
-                {Object.keys(translations).map(langId => (
-                    <button type='button' key={langId} onClick={()=> onChangeLanguage(langId)}>{selectedLanguage === langId ? '>':''}{t(langId)}</button>
-                ))}
+                {Object.keys(translations).map(langId => {
+                    const isSelected = selectedLanguage === langId
+                    return (
+                    <ConfigButton isSelected={isSelected} type='button' key={langId} onClick={()=> onChangeLanguage(langId)}>{isSelected ? '>':''}{t(langId)}</ConfigButton>
+                )
+                })}
             </LanguageWrapper>
         </HeaderWrapper>
     )
