@@ -2,7 +2,9 @@ import styled from 'styled-components'
 import { CheckProps } from './types'
 
 export const Check = styled.div<CheckProps>`
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     border: 1px solid black;
     ${({isSquare})=> isSquare ? '' : 'border-radius: 1em;'}}
@@ -11,17 +13,14 @@ export const Check = styled.div<CheckProps>`
     height: 1em;
 
     ${({isChecked})=> isChecked ? 'background: black;' : ''}}
-    :hover {
+    ${({readOnly})=> readOnly ? `:hover {
         background: blue;
-    }
+    }`: ''}
 `
 
 export const UnCheck = styled(Check)`
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border: 0;
-    :hover {
+    ${({readOnly})=> readOnly ? `:hover {
         background: red;
-    }
+    }`: ''}
 `

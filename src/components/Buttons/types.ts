@@ -1,3 +1,7 @@
 export type ButtonProps = {
-    onClick?: (event: any) => void
+    isSquare?: boolean
 }
+
+export type AddButtonProps = {
+    onClick?: (event: any) => void
+} & ButtonProps

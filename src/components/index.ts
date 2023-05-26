@@ -1,4 +1,5 @@
 export * from './Buttons/Buttons' 
+export * from './ConfigurationHeader/ConfigurationHeader' 
 export * from './Check/Check' 
 export * from './Counter/Counter' 
 export * from './DoubleTen/DoubleTen' 

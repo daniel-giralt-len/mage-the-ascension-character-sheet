@@ -1,4 +1,4 @@
-import { Section } from "../index"
+import { ConfigurationHeader, Section } from "../index"
 import styled from 'styled-components'
 import { useForm, FormProvider } from "react-hook-form"
 import { SheetProps } from "./types"
@@ -16,13 +16,16 @@ const SheetWrapper = styled.div`
 
 export const Sheet: React.FC<SheetProps> = ({sections, defaultValues}) => {
     const methods = useForm({defaultValues})
-    const {handleSubmit, reset} = methods
+    const {handleSubmit, reset, setValue} = methods
     const changeQueryString = (form: any) => {
+        setValue('readOnly', true)
         const queryString = encodeForm(form, defaultValues)
         var newRelativePathQuery = window.location.pathname + '?' + queryString.toString();
         history.pushState(null, '', newRelativePathQuery)
     }
     const onSubmit = handleSubmit(changeQueryString)
+    const onEdit = () => setValue('readOnly', false)
+    const onChangeLanguage = (langId: string) => setValue('language', langId)
 
     useEffect(() => {
         const formValues = decodeForm(window.location.search)
@@ -38,7 +41,11 @@ export const Sheet: React.FC<SheetProps> = ({sections, defaultValues}) => {
         <SheetCenterer>
             <SheetWrapper>
                 <form>
-                    <button type="button" onClick={onSubmit}>Finish</button>
+                    <ConfigurationHeader
+                        onSubmit={onSubmit}
+                        onEdit={onEdit}
+                        onChangeLanguage={onChangeLanguage}
+                    />
                     {sections.map((section,i)=><Section key={i} {...section}/>)}
                 </form>
             </SheetWrapper>
