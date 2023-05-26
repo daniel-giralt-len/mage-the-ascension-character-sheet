@@ -10,7 +10,7 @@ const TableWrapper = styled.div<TableWrapperType>`
     grid-template-columns: repeat(${({nCols})=>nCols},1fr);
 `
 
-export const Table: React.FC<TableType> = ({data = [[]], name}) => {
+export const Table: React.FC<TableType> = ({data = [[]], name,alwaysEditable}) => {
     const {getValues, setValue, watch} = useFormContext()
     const checks = watch(name)
     const toggleTableRow = (i: number) => {
@@ -18,7 +18,7 @@ export const Table: React.FC<TableType> = ({data = [[]], name}) => {
         previousState[i] = !previousState[i]
         setValue(name, previousState)
     }
-    const readOnly = watch('readOnly')
+    const readOnly = watch('readOnly') && !alwaysEditable
     return (
         <TableWrapper nCols={data[0].length} nRows={data.length}>
             {data.map((rowData,i) => rowData.map((cell,j) => {

@@ -16,31 +16,31 @@ const SkillWrapper = styled.div`
     justify-content: space-between;
 `
 
-const getSkillInputComponent: getSkillInputComponentType = ({name, type, table}) => {
+const getSkillInputComponent: getSkillInputComponentType = ({name, type, table, alwaysEditable}) => {
     switch(type) {
         case 'addableList':
-            return (<VariableList name={name} />)
+            return (<VariableList alwaysEditable={alwaysEditable} name={name} />)
         case 'table':
-            return (<Table data={table} name={name} />)
+            return (<Table alwaysEditable={alwaysEditable} data={table} name={name} />)
         case 'five':
-            return (<FiveChecks name={name} />)
+            return (<FiveChecks alwaysEditable={alwaysEditable} name={name} />)
         case 'ten':
-            return (<TenChecks name={name} />)
+            return (<TenChecks alwaysEditable={alwaysEditable} name={name} />)
         case 'doubleTen':
-            return (<DoubleTen name={name} />)
+            return (<DoubleTen alwaysEditable={alwaysEditable} name={name} />)
         case 'text':
-            return (<Text name={name} />)
+            return (<Text alwaysEditable={alwaysEditable} name={name} />)
         case 'number':
-            return (<Counter name={name} />)
+            return (<Counter alwaysEditable={alwaysEditable} name={name} />)
         case 'wheel':
-            return (<NChecks length={20} name={name} />)
+            return (<NChecks alwaysEditable={alwaysEditable} length={20} name={name} />)
         default:
             return (<div>FIELD NOT IMPLEMENTED {t(name)}, {type}</div>)
     }
 }
 
-export const Skill: React.FC<SkillType> = ({name, nameStyle, type, table}) => {
-    const SkillInputComponent = getSkillInputComponent({name, type, table})
+export const Skill: React.FC<SkillType> = ({name, nameStyle, type, table, alwaysEditable}) => {
+    const SkillInputComponent = getSkillInputComponent({name, type, table, alwaysEditable})
     if(nameStyle === 'header'){
         return (<>
             <SectionRowHeader>{t(name)}</SectionRowHeader>

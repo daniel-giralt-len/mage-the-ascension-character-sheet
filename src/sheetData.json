@@ -335,17 +335,20 @@
                         {
                             "nameStyle": "header",
                             "type": "ten",
-                            "name": "62"
+                            "name": "62",
+                            "alwaysEditable": true
                         },
                         {
                             "nameStyle": "header",
                             "type": "doubleTen",
-                            "name": "63"
+                            "name": "63",
+                            "alwaysEditable": true
                         },
                         {
                             "nameStyle": "header",
                             "type": "wheel",
-                            "name": "64"
+                            "name": "64",
+                            "alwaysEditable": true
                         }
                     ]
                 },
@@ -355,6 +358,7 @@
                             "name": "65",
                             "type": "table",
                             "nameStyle": "header",
+                            "alwaysEditable": true,
                             "table": [
                                 [
                                     "77",
@@ -396,7 +400,8 @@
                         {
                             "nameStyle": "header",
                             "type": "number",
-                            "name": "66"
+                            "name": "66",
+                            "alwaysEditable": true
                         }
                     ]
                 }

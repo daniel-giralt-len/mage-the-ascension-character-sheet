@@ -9,10 +9,11 @@ const NChecksWrapper = styled.div`
 `
 
 
-export const NChecks: React.FC<NChecksProps> = ({isSquare, length=5, name}) => {
+export const NChecks: React.FC<NChecksProps> = ({isSquare, length=5, name, alwaysEditable}) => {
     const { watch, setValue } = useFormContext()
     const value = watch(name)
-    const readOnly = watch('readOnly')
+    console.log(alwaysEditable)
+    const readOnly = watch('readOnly') && !alwaysEditable
 
 
     const handleValueChange = (v: number) => {

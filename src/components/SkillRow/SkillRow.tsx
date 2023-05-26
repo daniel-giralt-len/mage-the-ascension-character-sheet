@@ -8,8 +8,8 @@ export const SkillRow: React.FC<RowType> = ({fields, title}) => {
 
     return (<div>
         <SectionRowHeader>{t(title)}</SectionRowHeader>
-        {sortedFields.map(({name, nameStyle, type, table},i)=>{
-            return (<Skill name={name} nameStyle={nameStyle} type={type} table={table} key={i}/>)
+        {sortedFields.map(({name, nameStyle, type, table, alwaysEditable},i)=>{
+            return (<Skill alwaysEditable={alwaysEditable} name={name} nameStyle={nameStyle} type={type} table={table} key={i}/>)
         })}
     </div>)
 }

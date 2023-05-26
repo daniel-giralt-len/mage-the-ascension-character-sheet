@@ -6,9 +6,9 @@ const SkillWrapper = styled.div`
     display: flex;
     flex-direction: column;
 `
-export const DoubleTen: React.FC<DoubleTenProps> = ({name}) => {
+export const DoubleTen: React.FC<DoubleTenProps> = ({name, alwaysEditable}) => {
     return (<SkillWrapper>
-        <TenChecks name={`${name}.0`} />
-        <TenChecks isSquare name={`${name}.1`} />
+        <TenChecks name={`${name}.0`} alwaysEditable={alwaysEditable} />
+        <TenChecks isSquare name={`${name}.1`} alwaysEditable={alwaysEditable} />
     </SkillWrapper>)
 }
