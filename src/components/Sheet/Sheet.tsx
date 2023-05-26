@@ -36,7 +36,6 @@ export const Sheet: React.FC<SheetProps> = ({sections, defaultValues}) => {
         })
     }, [window.location.search])
 
-
     return (
     <FormProvider {...methods} >
         <GlobalStyle/>

@@ -1,4 +1,4 @@
-import { SectionHeader, SkillRow } from "../index"
+import { ConfigButton, SectionHeader, SkillRow } from "../index"
 import styled from 'styled-components'
 import { useState } from "react"
 import { SectionProps } from "./types"
@@ -19,7 +19,12 @@ export const Section: React.FC<SectionProps> = ({rows, title}) => {
     const toggleIsClosed = () => setIsClosed(!isClosed)
 
     return (<section>
-        {title && <SectionHeader onClick={toggleIsClosed}>{t(title)} ({isClosed ? '+' : '-'})</SectionHeader>}
+        {title && (<SectionHeader>
+            {t(title)}
+            <ConfigButton onClick={toggleIsClosed}>
+                {isClosed ? '+' : '-'}
+            </ConfigButton>
+        </SectionHeader>)}
         {!isClosed && (<SectionGrid>
             {rows && rows.map((row,i)=>(<SkillRow rowI={i} key={i} {...row}/>))}
         </SectionGrid>)}

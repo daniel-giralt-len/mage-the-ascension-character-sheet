@@ -8,6 +8,7 @@ export const HeaderWrapper = styled.div`
         flex-direction: column;
         row-gap: 5px;
     }
+    margin-bottom: 2em;
 `
 
 export const SaveInstructionsWrapper = styled.div`
