@@ -1,5 +1,6 @@
 {
   "en": {
+    "SaveInstructions": "Copy the URL to get your character",
     "Edit": "Edit",
     "Save": "Save",
     "en": "English",
@@ -39,6 +40,7 @@
     "31": "Etiquette",
     "32": "Firearms",
     "33": "Martial Arts",
+    "SaveInstructions": "Copy the URL to get your character",
     "34": "Meditation",
     "35": "Melee",
     "36": "Research",
@@ -91,6 +93,7 @@
     "83": "Incapacitated"
   },
   "es": {
+    "SaveInstructions": "Copia la URL para obtener tu personaje",
     "Edit": "Editar",
     "Save": "Guardar",
     "en": "Inglés",
@@ -182,6 +185,7 @@
     "83": "Incapacitado"
   },
   "ca": {
+    "SaveInstructions": "Copia l'URL per a quedar-te el teu personatge",
     "Edit": "Editar",
     "Save": "Guardar",
     "en": "Anglès",

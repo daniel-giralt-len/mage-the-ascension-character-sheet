@@ -18,6 +18,7 @@ export const ConfigurationHeader: React.FC<ConfigurationHeaderProps> = ({
                 ? (<button type='button' onClick={onEdit}>{t('Edit')}</button>)
                 : (<button type='button' onClick={onSubmit}>{t('Save')}</button>)
             }
+            {readOnly && <div>{t('SaveInstructions')}</div>}
             <LanguageWrapper>
                 {Object.keys(translations).map(langId => (
                     <button type='button' key={langId} onClick={()=> onChangeLanguage(langId)}>{selectedLanguage === langId ? '>':''}{t(langId)}</button>
